@@ -14,9 +14,31 @@ namespace Parsis.Talfigh.Service.ServiceInterface
         {
             _uow = uow;
         }
+
         public object Get(Tests request)
         {
-            return new TestsResponse { Tests = _uow.TestRepository.GetAll()};
+            //if (!Request.IsSecureConnection)
+            //{
+            //}
+                return new TestsResponse { Tests = _uow.TestRepository.GetAll()};
+        }
+
+        public object Post(Tests request)
+        {
+            
+            return new TestsResponse { Tests = _uow.TestRepository.GetAll() };
+        }
+
+        public object Put(long id)
+        {
+           
+            return new TestsResponse { Tests = _uow.TestRepository.GetAll() };
+        }
+
+        public object Delete(long id)
+        {
+           
+            return new TestsResponse { Tests = _uow.TestRepository.GetAll() };
         }
     }
 }
