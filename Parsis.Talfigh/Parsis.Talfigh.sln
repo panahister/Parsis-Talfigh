@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.DAL.Test", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{68CB72A1-6ED9-4CF1-98F6-B9F7F1A65CC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Host", "Host\Parsis.Talfigh.Host\Parsis.Talfigh.Host.csproj", "{CF36BF58-D08F-425A-9A6A-D0A86C506110}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTest", "IntegrationTest", "{EBF6F101-500D-467A-A1CF-0DEFEBCD23A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.IntegrationTests", "IntegrationTest\Parsis.Talfigh.IntegrationTests\Parsis.Talfigh.IntegrationTests.csproj", "{12B06E45-12F5-4E56-ADB4-5879D98D3105}"
@@ -24,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Service.ServiceInterface", "Service\Parsis.Talfigh.Host.Service.ServiceInterface\Parsis.Talfigh.Service.ServiceInterface.csproj", "{130DED02-5984-487C-93DD-0D264EED140E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Service.ServiceModel", "Service\Parsis.Talfigh.Host.Service.ServiceModel\Parsis.Talfigh.Service.ServiceModel.csproj", "{8D6DE92C-637E-4433-9810-98D7FBCEA6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Host", "Host\Parsis.Talfigh.Host\Parsis.Talfigh.Host.csproj", "{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +43,6 @@ Global
 		{2F619037-A519-41CD-8829-71E830EBC0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F619037-A519-41CD-8829-71E830EBC0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F619037-A519-41CD-8829-71E830EBC0D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Release|Any CPU.Build.0 = Release|Any CPU
 		{12B06E45-12F5-4E56-ADB4-5879D98D3105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12B06E45-12F5-4E56-ADB4-5879D98D3105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12B06E45-12F5-4E56-ADB4-5879D98D3105}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,6 +55,10 @@ Global
 		{8D6DE92C-637E-4433-9810-98D7FBCEA6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D6DE92C-637E-4433-9810-98D7FBCEA6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D6DE92C-637E-4433-9810-98D7FBCEA6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,9 +67,9 @@ Global
 		{D2F06AC8-BF60-4CB3-8FDF-D1FF18ABE970} = {D0CAA738-5A77-4382-BF65-8CEB818847BE}
 		{76430275-5363-40D5-B7B0-3AFA3F9A414C} = {D0CAA738-5A77-4382-BF65-8CEB818847BE}
 		{2F619037-A519-41CD-8829-71E830EBC0D4} = {D0CAA738-5A77-4382-BF65-8CEB818847BE}
-		{CF36BF58-D08F-425A-9A6A-D0A86C506110} = {68CB72A1-6ED9-4CF1-98F6-B9F7F1A65CC4}
 		{12B06E45-12F5-4E56-ADB4-5879D98D3105} = {EBF6F101-500D-467A-A1CF-0DEFEBCD23A1}
 		{130DED02-5984-487C-93DD-0D264EED140E} = {28C29192-3E51-4D35-B7AF-D067C6399D8E}
 		{8D6DE92C-637E-4433-9810-98D7FBCEA6BA} = {28C29192-3E51-4D35-B7AF-D067C6399D8E}
+		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD} = {68CB72A1-6ED9-4CF1-98F6-B9F7F1A65CC4}
 	EndGlobalSection
 EndGlobal

@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}</ProjectGuid>
+    <ProjectGuid>{08BAD04A-0C10-46B1-B537-575949C23DF1}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Parsis.Talfigh.Host</RootNamespace>
-    <AssemblyName>Parsis.Talfigh.Host</AssemblyName>
+    <RootNamespace>MvcEmptyWebApp1</RootNamespace>
+    <AssemblyName>MvcEmptyWebApp1</AssemblyName>
     <TargetFrameworkVersion>4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -163,7 +163,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

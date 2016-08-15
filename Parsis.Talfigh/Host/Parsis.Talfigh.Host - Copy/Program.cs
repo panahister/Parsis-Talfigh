@@ -12,8 +12,10 @@ namespace Parsis.Talfigh.Host
     {
         static void Main(string[] args)
         {
-            new AppHost().Init().Start("http://*:8088/");
-            "ServiceStack Self Host with Razor listening at http://127.0.0.1:8088".Print();
+           new AppHost().Init().Start("http://*:8088/");
+
+           
+
             Process.Start("http://localhost:8088/");
 
             Console.ReadLine();

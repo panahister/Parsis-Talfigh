@@ -15,7 +15,7 @@ using Parsis.Talfigh.DAL.Repository.Base;
 using ServiceStack.Admin;
 using Parsis.Talfigh.Service.ServiceInterface;
 
-namespace Parsis.Talfigh.Host
+namespace MvcEmptyWebApp1
 {
     public class AppHost : AppHostBase
     {
@@ -23,7 +23,7 @@ namespace Parsis.Talfigh.Host
         /// Base constructor requires a Name and Assembly where web service implementation is located
         /// </summary>
         public AppHost()
-            : base("Parsis.Talfigh.Host", typeof(TestsService).Assembly) { }
+            : base("MvcEmptyWebApp1", typeof(TestsService).Assembly) { }
 
         /// <summary>
         /// Application specific configuration
