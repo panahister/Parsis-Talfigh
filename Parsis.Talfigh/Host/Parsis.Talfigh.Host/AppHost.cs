@@ -52,6 +52,11 @@ namespace Parsis.Talfigh.Host
             Plugins.Add(new AdminFeature());
 
             Plugins.Add(new CorsFeature());
+
+            SetConfig(new HostConfig
+            {
+                DefaultContentType = MimeTypes.Json
+            });
         }
     }
 }
