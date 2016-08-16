@@ -34,7 +34,7 @@ namespace Parsis.Talfigh.Host
             {
                 HandlerFactoryPath = "api",
             });
-            
+
             ControllerBuilder.Current.SetControllerFactory(new FunqControllerFactory(container));
 
             container.Register<IDbConnectionFactory>(
@@ -46,7 +46,7 @@ namespace Parsis.Talfigh.Host
 
             container.RegisterAutoWiredType(typeof(TestService), typeof(ITestService));
 
-            
+
 
             Plugins.Add(new AutoQueryFeature { MaxLimit = 100 });
 
@@ -63,23 +63,23 @@ namespace Parsis.Talfigh.Host
 
             this.ServiceExceptionHandlers.Add((httpReq, request, exception) =>
             {
-                var dd =  (HttpError)exception;
+                var dd = (HttpError)exception;
                 return new HttpError(401, "ssss", "ssss");
 
-              
+
             });
 
             container.Register<ICacheClient>(new MemoryCacheClient());
             container.Register<ISessionFactory>(c => new SessionFactory(c.Resolve<ICacheClient>()));
 
-           
+
             Plugins.Add(new AuthFeature(
                 () => new CurrentSession(),
                 new IAuthProvider[]
                 {
                     new PasisCredentialsAuthProvider(),
                     new BasicAuthProvider()
-                },"http://www.google.com")
+                }, "http://www.google.com")
             );
 
 

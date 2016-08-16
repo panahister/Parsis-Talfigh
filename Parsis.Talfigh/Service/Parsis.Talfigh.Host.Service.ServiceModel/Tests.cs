@@ -7,10 +7,10 @@ using Parsis.Talfigh.Service.ServiceModel.Model;
 
 namespace Parsis.Talfigh.Service.ServiceModel
 {
-    [Route("/tests", "GET")]
-    [Route("/tests", "POST")]
-    [Route("/tests/{Id}", "PUT")]
-    [Route("/tests/{Id}", "DELETE")]
+    //[Route("/tests", "GET")]
+    //[Route("/tests", "POST")]
+    //[Route("/tests/{id}", "PUT")]
+    [Route("/tests/{id}", "DELETE")]
    
     public class TestsRequest : IReturn<TestsResponse>
     {
