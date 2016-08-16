@@ -180,6 +180,14 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Assistant\Parsis.Talfigh.Host.Assistant\Parsis.Talfigh.Host.Assistant.csproj">
+      <Project>{A48EDC40-7899-45C6-AC09-03274D5DA363}</Project>
+      <Name>Parsis.Talfigh.Host.Assistant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business\Parsis.Talfigh.Business\Parsis.Talfigh.Business.csproj">
+      <Project>{9ca46766-7ed4-4d78-bb46-fc99749aa10f}</Project>
+      <Name>Parsis.Talfigh.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DAL\Parsis.Talfigh.DAL\Parsis.Talfigh.DAL.csproj">
       <Project>{d2f06ac8-bf60-4cb3-8fdf-d1ff18abe970}</Project>
       <Name>Parsis.Talfigh.DAL</Name>

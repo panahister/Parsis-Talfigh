@@ -1,44 +1,55 @@
+using Parsis.Talfigh.Business.Service;
 using Parsis.Talfigh.DAL.Domain.Base;
 using Parsis.Talfigh.DAL.Infrastructure;
+using Parsis.Talfigh.Host.Assistant.Security;
 using Parsis.Talfigh.Service.ServiceInterface;
 using Parsis.Talfigh.Service.ServiceModel;
+using ServiceStack;
+using ServiceStack.Auth;
 using ServiceStack.OrmLite;
+using ServiceStack.Web;
+using System;
+using System.Threading.Tasks;
+using System.Web;
+using System.Linq;
+using Parsis.Talfigh.Service.ServiceModel.Model;
 
 namespace Parsis.Talfigh.Service.ServiceInterface
 {
     public class TestsService : ServiceStack.Service
     {
-        private IUnitOfWork _uow;
+        private ITestService _testService;
 
-        public TestsService(IUnitOfWork uow )
+        public TestsService(ITestService testService)
         {
-            _uow = uow;
+            _testService = testService;
         }
 
-        public object Get(Tests request)
+        public async Task<object> Get(TestsRequest request)
         {
-            //if (!Request.IsSecureConnection)
-            //{
-            //}
-                return new TestsResponse { Tests = _uow.TestRepository.GetAll()};
+             var result = await _testService.Get();
+
+            return new TestsResponse { Tests = result.Select(x => new TestsModel() {code = x.Code,id = x.Id,title = x.Title }).ToList() };
         }
 
-        public object Post(Tests request)
+       // [SSLRequierdttribute]
+        public async Task<object> Post(TestsRequest request)
         {
-            
-            return new TestsResponse { Tests = _uow.TestRepository.GetAll() };
+
+          return await  _testService.Insert(new Business.Model.TestModel() { Code = request.code, Title = request.title });
         }
 
-        public object Put(long id)
+        public async Task<object> Put(long id, TestsRequest request)
         {
-           
-            return new TestsResponse { Tests = _uow.TestRepository.GetAll() };
+
+            return await _testService.Update(new Business.Model.TestModel() { Code = request.title, Title = request.title,Id = id });
         }
 
-        public object Delete(long id)
+        public async Task<object> Delete(long id)
         {
-           
-            return new TestsResponse { Tests = _uow.TestRepository.GetAll() };
+
+            return await _testService.Delete(id);
         }
     }
+
 }

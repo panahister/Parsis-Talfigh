@@ -25,6 +25,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Service.Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Host", "Host\Parsis.Talfigh.Host\Parsis.Talfigh.Host.csproj", "{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host.Assistant", "Host.Assistant", "{3F474C19-B516-4C00-B3FC-2214B9A98B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Host.Assistant", "Assistant\Parsis.Talfigh.Host.Assistant\Parsis.Talfigh.Host.Assistant.csproj", "{A48EDC40-7899-45C6-AC09-03274D5DA363}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Assistant", "Assistant\Parsis.Talfigh.Assistant\Parsis.Talfigh.Assistant.csproj", "{BBF89B82-77A3-4639-B822-945A7C223577}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{0C78A74C-1CB7-453D-A506-1A85A7E53E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsis.Talfigh.Business", "Business\Parsis.Talfigh.Business\Parsis.Talfigh.Business.csproj", "{9CA46766-7ED4-4D78-BB46-FC99749AA10F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +69,18 @@ Global
 		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48EDC40-7899-45C6-AC09-03274D5DA363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48EDC40-7899-45C6-AC09-03274D5DA363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48EDC40-7899-45C6-AC09-03274D5DA363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48EDC40-7899-45C6-AC09-03274D5DA363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF89B82-77A3-4639-B822-945A7C223577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF89B82-77A3-4639-B822-945A7C223577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF89B82-77A3-4639-B822-945A7C223577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF89B82-77A3-4639-B822-945A7C223577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA46766-7ED4-4D78-BB46-FC99749AA10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA46766-7ED4-4D78-BB46-FC99749AA10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA46766-7ED4-4D78-BB46-FC99749AA10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA46766-7ED4-4D78-BB46-FC99749AA10F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +93,8 @@ Global
 		{130DED02-5984-487C-93DD-0D264EED140E} = {28C29192-3E51-4D35-B7AF-D067C6399D8E}
 		{8D6DE92C-637E-4433-9810-98D7FBCEA6BA} = {28C29192-3E51-4D35-B7AF-D067C6399D8E}
 		{A794F29B-ED83-4A72-AF69-B38EBF2C84DD} = {68CB72A1-6ED9-4CF1-98F6-B9F7F1A65CC4}
+		{A48EDC40-7899-45C6-AC09-03274D5DA363} = {3F474C19-B516-4C00-B3FC-2214B9A98B8A}
+		{BBF89B82-77A3-4639-B822-945A7C223577} = {3F474C19-B516-4C00-B3FC-2214B9A98B8A}
+		{9CA46766-7ED4-4D78-BB46-FC99749AA10F} = {0C78A74C-1CB7-453D-A506-1A85A7E53E1B}
 	EndGlobalSection
 EndGlobal

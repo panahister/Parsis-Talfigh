@@ -32,6 +32,15 @@ namespace Parsis.Talfigh.DAL.Infrastructure
 
         }
 
+        public virtual async Task<List<T>> GetAllAsync()
+        {
+            using (var db = dbFactory.Open())
+            {
+                return await db.SelectAsync<T>();
+            }
+
+        }
+
         public List<T> Get(Expression<Func<T, bool>> exp)
         {
 
@@ -40,39 +49,35 @@ namespace Parsis.Talfigh.DAL.Infrastructure
 
                 return db.Select<T>(exp);
             }
-           
-
-
         }
 
-        public virtual T GetById(int id)
+        public async Task<List<T>> GetAsync(Expression<Func<T, bool>> exp)
         {
-            using (var db = dbFactory.Open())
-            {
-
-                var o = db.SingleById<T>(id);
-                return o;
-            }
-
-           
-
-
-        }
-
-        public virtual T GetById(string id)
-        {
-
-           
 
             using (var db = dbFactory.Open())
             {
 
-                var o = db.SingleById<T>(id);
-                return o;
+                return await db.SelectAsync<T>(exp);
             }
+        }
 
+        public virtual T GetById(long id)
+        {
+            using (var db = dbFactory.Open())
+            {
 
+                return db.SingleById<T>(id);
+                 
+            }
+        }
 
+        public virtual async Task<T> GetByIdAsync(long id)
+        {
+            using (var db = dbFactory.Open())
+            {
+
+                return await db.SingleByIdAsync<T>(id);
+            }
         }
 
         public bool Save(T o, bool references)
@@ -101,42 +106,39 @@ namespace Parsis.Talfigh.DAL.Infrastructure
 
         }
 
-        public void Delete(long id)
+        public int Delete(long id)
         {
-            
 
             using (var db = dbFactory.Open())
             {
-
-                db.DeleteById<T>(id);
+              return   db.DeleteById<T>(id);
             }
 
 
         }
 
-        public async Task DeleteAsync(long id)
+        public async Task<int> DeleteAsync(long id)
         {
-
-
             using (var db = dbFactory.Open())
             {
-
-                db.DeleteByIdAsync<T>(id);
+              return await  db.DeleteByIdAsync<T>(id);
             }
-
-
         }
 
-        public void Delete(Expression<Func<T, bool>> exp)
+        public int Delete(Expression<Func<T, bool>> exp)
         {
             using (var db = dbFactory.Open())
             {
-
-                db.Delete<T>(exp);
+              return   db.Delete<T>(exp);
             }
+        }
 
-           
-
+        public async Task<int> DeleteAsync(Expression<Func<T, bool>> exp)
+        {
+            using (var db = dbFactory.Open())
+            {
+                return await db.DeleteAsync<T>(exp);
+            }
         }
 
         public long Insert(T o)
@@ -156,10 +158,6 @@ namespace Parsis.Talfigh.DAL.Infrastructure
 
                 return db.Update(o);
             }
-
-          
-
-
         }
 
         public async Task<long> InsertAsync(T o)
@@ -169,10 +167,6 @@ namespace Parsis.Talfigh.DAL.Infrastructure
 
                 return await db.InsertAsync(o, selectIdentity: true);
             }
-
-
-           
-
         }
 
         public async Task<long> UpdateAsync(T o)
@@ -183,9 +177,6 @@ namespace Parsis.Talfigh.DAL.Infrastructure
 
                 return await db.UpdateAsync(o);
             }
-           
-           
-
         }
 
         public void Dispose()
@@ -193,5 +184,7 @@ namespace Parsis.Talfigh.DAL.Infrastructure
            
             
         }
+
+        
     }
 }

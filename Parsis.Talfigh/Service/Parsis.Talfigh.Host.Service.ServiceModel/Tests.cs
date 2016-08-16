@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Parsis.Talfigh.DAL.Domain.Base;
 using System;
+using Parsis.Talfigh.Service.ServiceModel.Model;
 
 namespace Parsis.Talfigh.Service.ServiceModel
 {
@@ -11,26 +12,20 @@ namespace Parsis.Talfigh.Service.ServiceModel
     [Route("/tests/{Id}", "PUT")]
     [Route("/tests/{Id}", "DELETE")]
    
-    public class Tests : IReturn<TestsResponse>
+    public class TestsRequest : IReturn<TestsResponse>
     {
-        public long Id { get; set; }
+        public long id { get; set; }
+        public string code { get; set; }
+        public string title { get; set; }
     }
-
-
-    public class TestsResponse //: IHasResponseStatus
+    public class TestsResponse 
     {
         public TestsResponse()
         {
-           // this.ResponseStatus = new ResponseStatus();
-            this.Tests = new List<Test>();
+          
+            this.Tests = new List<TestsModel>();
         }
-
-
-       
-        public List<Test> Tests { get; set; }
-
-
-       
-      //  public ResponseStatus ResponseStatus { get; set; }
+        public List<TestsModel> Tests { get; set; }
     }
+
 }
